@@ -1,0 +1,14 @@
+[
+  {
+    "ParameterKey": "AWS::Region",
+    "ParameterValue": "ap-south-1"
+  }, 
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "m1.micro"
+  }
+
+  {
+    "ParameterKey": "HTTPSecurityGroup",
+    "ParameterValue": "mysg"
+  }
