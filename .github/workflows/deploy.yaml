@@ -32,7 +32,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.ACCESS_KEY_SECRET }}
-          aws-region: ${{ github.eventi.inputs.aws_region }}
+          aws-region: ${{ github.event.inputs.aws_region }}
 
       # Deploy to AWS CloudFormation
       - name: Deploy to AWS CloudFormation
