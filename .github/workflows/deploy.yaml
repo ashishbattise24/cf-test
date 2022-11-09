@@ -9,7 +9,7 @@ on:
    #Allows you to run this workflow manually from the Actions tab
    workflow_dispatch:
     inputs:
-      region:
+      aws_region:
         description: 'AWS Region to deploy to'
         required: true
         default: 'us-east-1'
@@ -32,7 +32,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.ACCESS_KEY_SECRET }}
-          aws-region: ${{ inputs.region }}
+          aws-region: ${{ github.eventi.inputs.aws_region }}
 
       # Deploy to AWS CloudFormation
       - name: Deploy to AWS CloudFormation
