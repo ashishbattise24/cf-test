@@ -1,14 +1,12 @@
 [
   {
-    "ParameterKey": "AWS::Region",
-    "ParameterValue": "us-east-2"
+    "ParameterKey": "KeyPairName",
+    "ParameterValue": "us-cf-key"
   }, 
   {
     "ParameterKey": "InstanceType",
-    "ParameterValue": "m1.micro"
-  }
-
-  {
-    "ParameterKey": "HTTPSecurityGroup",
-    "ParameterValue": "mysg"
-  }
+    "ParameterValue": "t2.micro"
+  },
+  
+ 
+]
