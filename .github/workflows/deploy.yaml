@@ -1,13 +1,13 @@
+---
 name: 'Deploy to AWS CloudFormation'
 
 on: 
    push:
      branches: [ main ]
    pull_request:
-     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+     branches: [ dev ]
+   #Allows you to run this workflow manually from the Actions tab
+   workflow_dispatch:
     inputs:
       region:
         description: 'AWS Region to deploy to'
@@ -38,7 +38,7 @@ jobs:
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: test-stack
+          name: test-stack1
           template: ct-teplate.yaml
           no-fail-on-empty-changeset: "1"
           parameter-overrides: "EC2InstanceType=t2.micro"
