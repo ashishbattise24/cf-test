@@ -480,7 +480,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
-      KeyName: !Ref KeyName
+      KeyName: !Ref ParameterKey
       InstanceType: !Ref InstanceType
       AvailabilityZone: !Select [ 0, !GetAZs ]
       SecurityGroupIds: [!Ref PublicSg]
@@ -493,7 +493,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
-      KeyName: !Ref KeyName
+      KeyName: !Ref ParameterKey
       InstanceType: !Ref InstanceType
       AvailabilityZone: !Select [ 1, !GetAZs ]
       SecurityGroupIds: [!Ref PublicSg]
