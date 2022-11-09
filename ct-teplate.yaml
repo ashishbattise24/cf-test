@@ -668,23 +668,24 @@ Resources:
               - !GetAtt WebsiteALBTargetGroup.TargetGroupFullName
         TargetValue: 5
 
+        #        
 # Docs: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html
-Metadata:
- # Control the UI display when running this template from the AWS Management Console
- AWS::CloudFormation::Interface:
-  ParameterGroups:
-    - Label:
-        default: "SSH Access"
-      Parameters: 
-        - KeyName
-        - SSHLocation
-    - Label:
-        default: "Network Configuration"
-      Parameters:
-        - VpcCidrBlock
-        - IPv4MaskSize
-    - Label:
-        default: "Resources Configuration"
-      Parameters:
-        - InstanceType
-        - PrivateResourcesCreation
+#Metadata:
+# # Control the UI display when running this template from the AWS Management Console
+# AWS::CloudFormation::Interface:
+#  ParameterGroups:
+#    - Label:
+#        default: "SSH Access"
+#      Parameters: 
+#        - KeyName
+#        - SSHLocation
+#    - Label:
+#        default: "Network Configuration"
+#      Parameters:
+#        - VpcCidrBlock
+#        - IPv4MaskSize
+#    - Label:
+#        default: "Resources Configuration"
+#      Parameters:
+#        - InstanceType
+#        - PrivateResourcesCreation
