@@ -38,7 +38,7 @@ jobs:
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: test-stack1
+          name: test-stack2
           template: ct-teplate.yaml
           no-fail-on-empty-changeset: "1"
           parameter-overrides: "EC2InstanceType=t2.micro"
