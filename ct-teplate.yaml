@@ -54,7 +54,7 @@ Parameters:
     AllowedValues: [true, false]
 
   # EC2 allowed instance types
-  InstanceType:
+  EC2InstanceType:
     Description: EC2 allowed instance types to be used 
     Type: String
     Default: t2.micro
