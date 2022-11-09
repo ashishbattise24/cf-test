@@ -482,7 +482,7 @@ Resources:
     Properties: 
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
       KeyName: us-cf-key
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref EC2InstanceType
       AvailabilityZone: !Select [ 0, !GetAZs ]
       SecurityGroupIds: [!Ref PublicSg]
       SubnetId: !Ref PublicSubnetA
@@ -495,7 +495,7 @@ Resources:
     Properties: 
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
       KeyName: us-cf-key 
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref EC2InstanceType
       AvailabilityZone: !Select [ 1, !GetAZs ]
       SecurityGroupIds: [!Ref PublicSg]
       SubnetId: !Ref PublicSubnetB
@@ -509,7 +509,7 @@ Resources:
     Properties: 
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
       KeyName: !Ref KeyName
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref EC2InstanceType
       AvailabilityZone: !Select [ 0, !GetAZs ]
       SecurityGroupIds: [!Ref PrivateSg]
       SubnetId: !Ref PrivateSubnetA
@@ -533,7 +533,7 @@ Resources:
     Properties: 
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
       KeyName: !Ref KeyName
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref EC2InstanceType
       AvailabilityZone: !Select [ 1, !GetAZs ]
       SecurityGroupIds: [!Ref PrivateSg]
       SubnetId: !Ref PrivateSubnetB
@@ -607,7 +607,7 @@ Resources:
     Properties: 
       AssociatePublicIpAddress: false
       ImageId: !FindInMap [AWSRegionLinux2AMI, !Ref 'AWS::Region', HVM64]
-      InstanceType: !Ref InstanceType
+      InstanceType: !Ref EC2InstanceType
       InstanceMonitoring: false
       KeyName: !Ref KeyName
       LaunchConfigurationName: website-lc
