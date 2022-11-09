@@ -1,6 +1,6 @@
 [
   {
-    "ParameterKey": "KeyPairName",
+    "ParameterKey": "KeyName",
     "ParameterValue": "us-cf-key"
   }, 
   {
