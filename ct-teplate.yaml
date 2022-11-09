@@ -23,7 +23,7 @@ Parameters:
   # EC2 key pair to be used
   KeyName: 
     Description: Name of an existing EC2 key pair to enable SSH access to the instances
-    Type: AWS::EC2::KeyPair::KeyName
+    Type: AWS::EC2::KeyPair::us-cf-key
     #ConstraintDescription: must be the name of an existing EC2 KeyPair
   
   # CIDR block
