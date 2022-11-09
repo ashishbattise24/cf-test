@@ -7,12 +7,12 @@ on:
    pull_request:
      branches: [ dev ]
    #Allows you to run this workflow manually from the Actions tab
-   #workflow_dispatch:
-   # inputs:
-   #   region:
-   #     description: 'AWS Region to deploy to'
-   #     required: true
-   #     default: 'us-east-1'
+   workflow_dispatch:
+    inputs:
+      region:
+        description: 'AWS Region to deploy to'
+        required: true
+        default: 'us-east-1'
 
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.ACCESS_KEY_SECRET }}
-          #aws-region: ${{ github.event.inputs.region }}
+          aws-region: ${{ inputs.region }}
 
       # Deploy to AWS CloudFormation
       - name: Deploy to AWS CloudFormation
